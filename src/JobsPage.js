@@ -3,11 +3,20 @@ import { getJobs } from "./functions";
 
 const JobsPage = () => {
   const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    getJobs().then((data) => setJobs(data));
+    setLoading(true);
+    getJobs()
+      .then((data) => {
+        setJobs(data);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
   return (
     <div style={{ margin: "2% 5%" }}>
+      {loading && <h1>Loading...</h1>}
       {jobs.map((elem, index) => (
         <div style={{ border: "1px solid black" }}>
           <h1 style={{ fontSize: "16px" }}>{elem.title}</h1>

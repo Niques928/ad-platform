@@ -11,8 +11,8 @@ const Rout = () => {
   const lastName = localStorage.getItem("lastName");
   return (
     <div>
-      <Header firstName={firstName} lastName={lastName} />
       <BrowserRouter>
+        <Header firstName={firstName} lastName={lastName} />
         <Routes>
           <Route
             path="/"
@@ -37,6 +37,11 @@ const Rout = () => {
                 <div style={{ margin: "3px" }}>
                   <Link to={"/companies"}>
                     <a>Companies</a>
+                  </Link>
+                </div>
+                <div style={{ margin: "3px" }}>
+                  <Link to={"/settings"}>
+                    <a>Settings</a>
                   </Link>
                 </div>
               </div>

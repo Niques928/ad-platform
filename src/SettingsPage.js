@@ -16,24 +16,36 @@ const SettingsPage = () => {
   };
 
   return (
-    <form style={{ margin: "2% 5%" }} onSubmit={onSave}>
-      <input
-        onChange={(event) => setFirstName(event.target.value)}
-        value={firstName}
-        placeholder={"First Name"}
-      />
-      <input
-        onChange={(event) => setLastName(event.target.value)}
-        value={lastName}
-        placeholder={"Last Name"}
-      />
+    <form
+      style={{ margin: "2% 15%", display: "flex", flexDirection: "column" }}
+      onSubmit={onSave}
+    >
+      <h3>Local name</h3>
+      <div style={{ marginTop: "10px" }}>
+        <input
+          onChange={(event) => setFirstName(event.target.value)}
+          value={firstName}
+          placeholder={"First Name"}
+        />
+      </div>
+      <div style={{ marginTop: "10px" }}>
+        <input
+          onChange={(event) => setLastName(event.target.value)}
+          value={lastName}
+          placeholder={"Last Name"}
+        />
+      </div>
 
-      <input
-        onChange={(event) => setEmail(event.target.value)}
-        value={email}
-        placeholder={"email"}
-      />
-      <button type={"submit"}>Save</button>
+      <div style={{ marginTop: "10px" }}>
+        <input
+          onChange={(event) => setEmail(event.target.value)}
+          value={email}
+          placeholder={"email"}
+        />
+      </div>
+      <div style={{ marginTop: "10px" }}>
+        <button type={"submit"}>Save</button>
+      </div>
     </form>
   );
 };
