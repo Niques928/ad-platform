@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import AddJobPage from "./AddJobPage";
 import JobsPage from "./JobsPage";
 import CandidatesPage from "./CandidatesPage";
+import CompaniesPage from "./CompaniesPage";
 const Rout = () => {
   return (
     <BrowserRouter>
@@ -28,8 +29,8 @@ const Rout = () => {
                 </Link>
               </div>
               <div style={{ margin: "3px" }}>
-                <Link to={"/createJob"}>
-                  <a>Create Job</a>
+                <Link to={"/companies"}>
+                  <a>Companies</a>
                 </Link>
               </div>
             </div>
@@ -37,7 +38,7 @@ const Rout = () => {
         />
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/candidates" element={<CandidatesPage />} />
-        {/*<Route path="/companies" element={<CompaniesPage />} />*/}
+        <Route path="/companies" element={<CompaniesPage />} />
         {/*<Route path="/settings" element={<SettingsPage />} />*/}
         <Route path="/createJob" element={<AddJobPage />} />
       </Routes>
