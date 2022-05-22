@@ -8,3 +8,10 @@
 .fullname{
     margin: auto 30px auto auto;
 }
+.brandName{
+    color: black;
+    font-family: "Arial Black";
+    cursor: pointer;
+    margin: auto auto auto 30px;
+
+}
