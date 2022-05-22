@@ -8,15 +8,12 @@ const AddJobPage = () => {
   const [title, setTitle] = useState("");
 
   const onCreate = () => {
-    if (!description || !employment || !salary || title) return;
-    // postJob({ description, employment, salary, title });
+    if (!description || !employment || !salary || !title) return;
+    postJob({ description, employment, salary, title });
   };
 
   return (
-    <form
-      onSubmit={() => onCreate()}
-      style={{ display: "flex", flexDirection: "column", margin: "3% 2%" }}
-    >
+    <div style={{ display: "flex", flexDirection: "column", margin: "3% 2%" }}>
       <div style={{ margin: "5px" }}>
         <input
           onChange={(event) => setTitle(event.target.value)}
@@ -47,9 +44,9 @@ const AddJobPage = () => {
         />
       </div>
       <div style={{ margin: "5px" }}>
-        <button type={"submit"}>Create</button>
+        <button onClick={() => onCreate()}>Create</button>
       </div>
-    </form>
+    </div>
   );
 };
 
