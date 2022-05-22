@@ -1,0 +1,10 @@
+.header{
+    height: 45px;
+    width: 100%;
+    background-color: #f1f1f1;
+    display: flex;
+
+}
+.fullname{
+    margin: auto 30px auto auto;
+}
