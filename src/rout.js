@@ -4,6 +4,7 @@ import AddJobPage from "./AddJobPage";
 import JobsPage from "./JobsPage";
 import CandidatesPage from "./CandidatesPage";
 import CompaniesPage from "./CompaniesPage";
+import SettingsPage from "./SettingsPage";
 const Rout = () => {
   return (
     <BrowserRouter>
@@ -39,7 +40,7 @@ const Rout = () => {
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/candidates" element={<CandidatesPage />} />
         <Route path="/companies" element={<CompaniesPage />} />
-        {/*<Route path="/settings" element={<SettingsPage />} />*/}
+        <Route path="/settings" element={<SettingsPage />} />
         <Route path="/createJob" element={<AddJobPage />} />
       </Routes>
     </BrowserRouter>
