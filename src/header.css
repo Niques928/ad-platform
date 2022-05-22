@@ -1,17 +1,24 @@
-.header{
-    height: 45px;
-    width: 100%;
-    background-color: #f1f1f1;
-    display: flex;
+.header {
+  height: 45px;
+  width: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+
+
 
 }
-.fullname{
+.fullname {
     margin: auto 30px auto auto;
 }
-.brandName{
+
+.brandName {
     color: black;
     font-family: "Arial Black";
     cursor: pointer;
     margin: auto auto auto 30px;
-
+}
+@media screen and (max-width: 500px) {
+    .brandName {
+        font-size: 14px;
+    }
 }
